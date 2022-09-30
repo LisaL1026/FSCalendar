@@ -76,7 +76,7 @@
     }
     CGFloat x = 0;
     for (NSInteger i = 0; i < count; i++) {
-        CGFloat width = widths[i];
+        CGFloat width = ceilf(widths[i]);
         NSInteger labelIndex = opposite ? count-1-i : i;
         UILabel *label = [self.weekdayPointers pointerAtIndex:labelIndex];
         label.frame = CGRectMake(x, 0, width, self.contentView.fs_height);
